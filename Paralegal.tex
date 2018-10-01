@@ -8,11 +8,14 @@
 \documentclass[12pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv themes
-\moderncvstyle{banking}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
-\moderncvcolor{burgundy}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+% style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvstyle{banking}
+% color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+\moderncvcolor{burgundy}
 \renewcommand{\sfdefault}{lmss}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 \renewcommand{\rmdefault}{ppl}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+% uncomment to suppress automatic page numbering for CVs longer than one page
+\nopagenumbers{}
 
 % Allows a command to be repeated.
 \usepackage{expl3}
@@ -70,16 +73,13 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
-\section{Objective}
-Current student in paralegal studies. Seeking to bring experience with software, computing, and detail-oriented writing into an entry-level paralegal or legal assistant position.
-
 \section{Education}
-	\cventry{2017--Present}{Paralegal Certification}{West Valley Community College}{}{}{}
-
 	\cventry{2010--2014}{BSc. Mathematics}{University of California, Santa Barbara}{}{}{Studied combinatorics, graph theory, linear algebra, and the foundations of statistics.}  % arguments 3 to 6 can be left empty
 
 	\cventry{}{BA. Philosophy}{University of California, Santa Barbara}{}{}{Specialization in logic and the philosophy of mathematics.}  % arguments 3 to 6 can be left empty
 %\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
+
+	\cventry{2017--Present}{Paralegal Certification}{West Valley Community College}{}{}{}
 
 \section{Experience}
 \cventry{2015--2016}{Technical Consultant}{Desert Farms Camel Milk}{Santa Monica}{}{%
@@ -100,48 +100,28 @@ Current student in paralegal studies. Seeking to bring experience with software,
 \begin{hidden}
 \end{hidden}
 
-
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-%\nocite{*}
-%\bibliographystyle{plain}
-%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
-
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
-
-\end{document}
 \clearpage
 %-----       letter       ---------------------------------------------------------
 % recipient data
-\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
-\date{January 01, 1984}
-\opening{Dear Sir or Madam,}
-\closing{Yours faithfully,}
-\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\recipient{Joseph D. Kostmayer}{Law Offices of Joseph D. Kostmayer\\95 S Market St, Ste 300\\San Jose}
+\date{September 27, 2018}
+\opening{Dear Mr. Kostmayer,}
+\closing{Yours respectfully,}
+% \enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
 \makelettertitle
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
+As a paralegal I would bring my skill set in philosophical reasoning, technology, and mathematics as well as my enthusiasm for problem-solving.
 
-Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
+\textit{With regards to client acquisition:}
+I am knowledgable in the administration of websites. I am capable of creating and maintaining a solid web presence for the firm which would make it it easier for potential clients to find it. I know of various database systems and how they might be used to keep track of which clients are involved with the firm.
 
-Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
+\textit{With regards to law office management:}
+I can troubleshoot almost any technical issue that might arise; computers like me and I am comfortable with adapting to new technologies. As such, I would be able to help a transition to a new software platform if it arose. I would also be capable of working with billing (which is largely a matter of multiplication and spreadsheet entry).
 
-Albert Einstein discovered that $e=mc^2$ in 1905.
+\textit{With regards to legal argumentation:}
+My training in philosophy involved a great deal of definitional nitpicking, work with technical subjects, close reading of texts and, of course, arguing for positions. In combination with mathematics I have a strong grasp of logic. I would be an effective sounding board for brainstorming in discussions. 
 
-\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
 
 \makeletterclosing
-
-%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
-
-
 %% end of file `template.tex'.
