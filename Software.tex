@@ -20,16 +20,7 @@
 \cs_new_eq:NN \Repeat \prg_replicate:nn
 \ExplSyntaxOff
 
-% Put at the end!
-\usepackage{anyfontsize}
-\newenvironment{hidden}{\color{white}\fontsize{1}{1}\selectfont}{}
-% Uncomment if we're not using `anyfontsize`. Less ideal, but....
-% Maybe adding in a "subscript" thing can shrink it even more?
-%\newenvironment{hidden}{\color{white}\tiny}{}
-
-% character encoding
-%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
-%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 
 % adjust the page margins
 \usepackage[scale=0.80]{geometry}
@@ -38,36 +29,30 @@
 
 \usepackage{tikz}
 
+% Put at the end!
+\usepackage{anyfontsize}
+\newenvironment{hidden}{\color{white}\fontsize{1}{1}\selectfont}{}
+
+
 % personal data
 \name{David}{Vaillant}
 %\title{Resumé title}                               % optional, remove / comment the line if not wanted
-\address{San Jose, CA}{}{}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\address{Saratoga, CA}{}{}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{(408)~439~7551}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
-\email{dvaillant@gmail.com}                               % optional, remove / comment the line if not wanted
+\email{david@vaillant.io}                               % optional, remove / comment the line if not wanted
 %\homepage{vaillant.io}                         % optional, remove / comment the line if not wanted
 %\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
 %\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
 \social[github]{D-Vaillant}                              % optional, remove / comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
-%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
-% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
-%   to show numerical labels in the bibliography (default is to show no labels)
-%\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
-%   to redefine the bibliography heading string ("Publications")
-%\renewcommand{\refname}{Articles}
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
 \newcommand{\tikzcircle}[2][color2,fill=color1]{\tikz[baseline=-0.5ex]\draw[#1,radius=#2] (0,0) circle ;}%
 \newcommand{\progress}[1]{\Repeat{#1}{\tikzcircle{2.75pt}\,}\Repeat{5-#1}{\tikzcircle[color2,fill=white]{2.75pt}\,}}%
-%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
@@ -78,76 +63,40 @@
 %\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
 
 \section{Experience}
-\cventry{2015--2016}{Technical Consultant}{Desert Farms Camel Milk}{Santa Monica}{}{%
-\begin{itemize}%
-\item Used the Shopify API to query customer orders and programmatically organized those into dynamically generated spreadsheets, saving hours of manual labor.
-\item Improved the performance and responsivity for the online storefront by correcting a crucial underlying software defect, leading to increased customer satisfaction and retention
-\item Played a key role in requisitioning vital hardware which ultimately eliminated employee productivity bottlenecks
-\end{itemize}}
-
-\cventry{2017-2018}{Mathematics Tutor}{West Valley College}{Saratoga}{}{Tutored disadvantaged students in algebra, statistics, and fundamental concepts in mathematics.}
+	\cventry{2019--Present}{Software Quality Analysis}{Waymo (via Crowdstaffing)}{Mountain View}{}{%
+		\begin{itemize}%
+			\setlength\itemsep{.2em}
+			\item Provided detailed metrics on the behavioral faults of self-driving vehicles.
+			\item Leveraged Python, SQL, and Pandas to present data efficiently and accurately.
+			\item Proposed and acted as lead on a broad proposal to systematize and automate large parts of the Software Quality workflow.
+		\end{itemize}}
+	\cventry{2017--2018}{Mathematics Tutor}{West Valley College}{Saratoga}{}{Tutored disadvantaged students in algebra, statistics, and fundamental concepts in mathematics.}
+	\cventry{2015--2016}{Technical Consultant}{Desert Farms Camel Milk}{Santa Monica}{}{%
+		\begin{itemize}%
+			\setlength\itemsep{.2em}
+			\item Saved hours of manual labor by programmatically querying and organizing customer orders using Ruby scripting.
+			\item Improved the performance and responsivity for the online storefront and increased customer satisfaction and retention by correcting a crucial underlying software defect.
+		\end{itemize}}
 
 \section{Programming Languages}
 	\cvitemwithcomment{Python}{\progress{4}}{Flask/SQLAlchemy, numpy, scikitlearn, pandas, matplotlib, seaborn.}
-	\cvitemwithcomment{Ruby}{\progress{2}}{Ruby on Rails.}
-	\cvitemwithcomment{R}{\progress{2}}{Data wrangling with tidyverse.}
-	\cvitemwithcomment{Javascript}{\progress{1}}{jQuery.}
-	\cvitem{MATLAB}{\progress{1}}
+	\cvitemwithcomment{C++}{\progress{2}}{Protobufs.}
+	\cvitemwithcomment{Javascript}{\progress{2}}{jQuery.}
+	\cvitemwithcomment{Ruby}{\progress{1}}{Ruby on Rails.}
 
 \section{Software Proficiencies}
-	\cvitem{OS}{Windows, GNU/Linux, FreeBSD}
-	\cvitem{Databases}{SQLite, MySQL, PostgreSQL}
-	\cvitem{Adobe}{Photoshop, Illustrator}
+	\cvitem{\textbf{OS}}{Windows, GNU/Linux (Arch, Debian), FreeBSD}
+	\cvitem{\textbf{Databases}}{SQLite, PostgreSQL, GoogleSQL}
 	\cvitem{}{Experience with relationship databases and server management.}
-	\cvitem{}{Comfortable with and capable of confronting and learning new fields.}
+	\cvitem{}{Highly proficient in adapting to new technologies.}
 \closesection
 
 \begin{hidden}
-BS MS PhD Computer Science Computer Engineering Mathematics Physics Economics related field 0-2 years of real world research experience in data science. Statistics knowledge descriptive analysis supervised unsupervised analysis Big Data technologies Hadoop Cassandra model development life-cycle-management industry/application domain Programming various languages (C++ Scala Java R) proficiency Python C++ Understanding Machine Learning linear/logistics regression discriminant analysis bagging random forest Bayesian model SVM neural networks Knowledge skills in the use of current state of the art machine learning frameworks such as Scikit-Learn H2O Keras TensorFlow Spark etc. Demonstrated ability to implement new algorithms methodologies from leading open source initiatives research papers addressing their functionalities scalability overall industrialization viability Certifying MI MOOCS a plus Applications/Domain-knowledge in Telecommunication and/IoT a plus. Ability to build nurture internal external communities Experience with data visualization dashboard creation is a plus Ability to work independently with high energy enthusiasm persistence Good communication skills in written spoken English Experience in writing presenting white papers journal articles technical blogs on the results Ability to work in a collaborative environment i.e. working with complex multiple stakeholder business units global customers technology other ecosystem partners in a multi-culture global matrix organization with sensitivity persistence 
+	tensorflow keras scikit-learn machine learning statistical techniques models business effective project planning complex r sas python hadoops wide variety tools languages collaboration team decisions predictive data innovates effective communication team player professional sqlite mysql sql postgresql nginx apache web javascript self driven starter innovative analytical spss scalable pipelines scraping scrapping non-linear linear regression modelling
+
 \end{hidden}
 
-
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-%\nocite{*}
-%\bibliographystyle{plain}
-%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
-
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
-
 \end{document}
-\clearpage
-%-----       letter       ---------------------------------------------------------
-% recipient data
-\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
-\date{January 01, 1984}
-\opening{Dear Sir or Madam,}
-\closing{Yours faithfully,}
-\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
-\makelettertitle
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
-
-Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
-
-Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
-
-Albert Einstein discovered that $e=mc^2$ in 1905.
-
-\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
-
-\makeletterclosing
-
-%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
-\end{document}
-
+%\clearpage
 
 %% end of file `template.tex'.
