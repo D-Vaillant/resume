@@ -9,7 +9,7 @@
 
 % moderncv themes
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
-\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+\moderncvcolor{black}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
 \renewcommand{\sfdefault}{lmss}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 \renewcommand{\rmdefault}{ppl}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
@@ -23,7 +23,7 @@
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 
 % adjust the page margins
-\usepackage[scale=0.80]{geometry}
+\usepackage[scale=0.85]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
@@ -37,7 +37,7 @@
 % personal data
 \name{David}{Vaillant}
 %\title{Resumé title}                               % optional, remove / comment the line if not wanted
-\address{San Jose, CA}{}{}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+% \address{San Jose, CA}{}{}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{(408)~439~7551}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 \email{david@vaillant.io}                               % optional, remove / comment the line if not wanted
 %\homepage{vaillant.io}                         % optional, remove / comment the line if not wanted
@@ -56,49 +56,52 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
-\section{Education}
-\cventry{2010--2014}{BSc. Mathematics}{University of California, Santa Barbara}{}{}{Studied combinatorics, graph theory, linear algebra, and the foundations of statistics.}  % arguments 3 to 6 can be left empty
-
-\cventry{}{BA. Philosophy}{}{}{}{Specialization in logic and the philosophy of mathematics.}  % arguments 3 to 6 can be left empty
-%\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
-
 \section{Experience}
-	\cventry{2019--Present}{Software Quality Assurance Specialist}{Waymo (via Crowdstaffing)}{Mountain View}{}{%
+	\vspace{.5em}
+	\cventry{2021--Present}{Support Technician}{X (via ERGInc)}{Mountain View}{}{%
+        Managed customer fulfillment, organized and tracked device inventory, and worked with Data Science to provide useful insights to the rest of the team. 
 		\begin{itemize}%
 			\setlength\itemsep{.2em}
-			\item Applied root cause analysis to behavioral issues in self-driving vehicles.
-			\item Streamlined the software fault analysis workflow using SQL-driven automated dashboards.
+			\item Further developed nascent inventory management system, greatly decreasing the amount of taken to batch edit device states and creating a SQL interface.
+            \item Created ETL pipelines between our inventory management system, existing device information, and Salesforce.
+            \item Worked with hardware team to design and run temperature validation processes. Transitioned process from manual work done via Mathematica to an automated Python script that uploads results directly to a BigQuery database.
+        \end{itemize}}
+		\vspace{.5em}
+
+	\cventry{2019--2021}{Software Quality Specialist}{Waymo (via Crowdstaffing)}{Mountain View}{}{%
+        Analyzed instances of misbehavior by self-driving vehicles and applied root cause analysis to determine the specific software system responsible.
+		\begin{itemize}%
+			\setlength\itemsep{.2em}
+			\item Streamlined the software fault analysis workflow using SQL-driven dashboards.
 			\item Implemented productivity-saving features for proprietary applications.
 			\item Designed and managed the rollout of new workflows across multiple teams.
 		\end{itemize}}
+		\vspace{.5em}
+
 	\cventry{2017--2018}{Mathematics Tutor}{West Valley College}{Saratoga}{}{%
-		\begin{itemize}%
-			\setlength\itemsep{.2em}
-			\item Tutored disadvantaged students in algebra, statistics, and fundamental concepts in mathematics.
-		\end{itemize}}
+        Tutored disadvantaged students in algebra, statistics, and fundamental concepts in mathematics.}
+		\vspace{.5em}
+
 	\cventry{2015--2016}{Technical Intern}{Desert Farms Camel Milk}{Santa Monica}{}{%
+        Provided technical support for an online small business. 
 		\begin{itemize}%
 			\setlength\itemsep{.2em}
 			\item Saved hours of manual labor by programmatically querying and organizing customer orders using Ruby scripting.
 			\item Improved the performance and responsivity of the online storefront, increasing customer satisfaction and retention.
 		\end{itemize}}
 
-\section{Programming Languages}
-	\cvitemwithcomment{Python}{\progress{4}}{}
-	\cvitemwithcomment{Bash}{\progress{3}}{}
-	\cvitemwithcomment{SQL}{\progress{3}}{}
-	\cvitemwithcomment{C++}{\progress{2}}{}
-	\cvitemwithcomment{Javascript}{\progress{2}}{}
-	\cvitemwithcomment{Java}{\progress{1}}{}
+\section{Education}
+\vspace{.5em}
+
+\cventry{2010--2014}{BSc. Mathematics}{University of California, Santa Barbara}{}{}{Studied combinatorics, graph theory, linear algebra, and the foundations of statistics.}  % arguments 3 to 6 can be left empty
+
+\cventry{}{BA. Philosophy}{}{}{}{Specialization in logic and the philosophy of mathematics.}  % arguments 3 to 6 can be left empty
+%\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
 
 \section{Proficiencies}
-	%% \cvitem{\textbf{OS}}{Windows, GNU/Linux (Arch, Debian), FreeBSD}
-	%% \cvitem{\textbf{Databases}}{SQLite, PostgreSQL, GoogleSQL}
-	\cvitem{}{Scraping, data analysis, and development in Python.}
-	\cvitem{}{App development in C++, Javascript
-	\cvitem{}{Experience with relationship databases and server management.}
-	\cvitem{}{Proficient in adapting to new technologies.}
-	\cvitem{}{Strong ability to identify and communicate abstractions.}
+	\cvitem{\textbf{OS}}{Windows, Linux, FreeBSD}
+    \cvitem{\textbf{Languages}}{Python, SQL, \LaTeX, C++}
+    \cvitem{\textbf{Tools}}{bash, git, GCP (Cloud Run, Composer, BigQuery, Spanner), Salesforce}
 \closesection
 
 \begin{hidden}
