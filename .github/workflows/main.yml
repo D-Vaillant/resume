@@ -1,5 +1,3 @@
-
-    
 name: Build LaTeX document
 on: [push]
 jobs:
@@ -15,6 +13,6 @@ jobs:
           root-file: "data/*.tex"
       - name: Upload PDF Artifacts
         uses: actions/upload-artifact@v2
-          with:
-            name: artifacts
-            path: "data/*.pdf"
+        with:
+          name: artifacts
+           path: "data/*.pdf"
