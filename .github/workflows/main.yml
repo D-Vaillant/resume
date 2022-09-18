@@ -1,5 +1,8 @@
 name: Build LaTeX document
-on: [push]
+on:
+  push:
+    branches:
+    - master
 jobs:
   build_latex:
     runs-on: ubuntu-latest
@@ -9,8 +12,8 @@ jobs:
       - name: Github Action for LaTeX
         uses: xu-cheng/latex-action@v2
         with:
-          glob-root-file: true
-          root-file: "data/*.tex"
+          glob_root_file: true
+          root_file: "data/*.tex"
       - name: Upload PDF Artifacts
         uses: actions/upload-artifact@v2
         with:
